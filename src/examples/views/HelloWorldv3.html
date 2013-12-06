@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.3/angular.min.js"></script>
+    <script type="text/javascript" src="../js/controller/world.js"></script>
+    <title></title>
+</head>
+<body ng-app>
+<ul ng-controller="WorldCtrl">
+    <li ng-repeat="country in countries">
+        {{country.name}} has population of {{country.population}},  {{worldsPercentage(country.population)}}%
+        of the world's population
+    </li>
+    <hr>
+    World's population: {{population}}
+</ul>
+</body>
+</html>
