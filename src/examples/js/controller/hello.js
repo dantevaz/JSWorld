@@ -14,3 +14,6 @@ var HelloCtrl = function ($scope){
         return $scope.name;
     }
 }
+
+//to declare as a module
+//angular.module('hello', []).controller('HelloCtrl', ...);

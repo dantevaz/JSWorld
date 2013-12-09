@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="../css/examples.css">
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.3/angular.min.js"></script>
+    <script type="text/javascript" src="../js/controller/limitedMessage.js"></script>
+</head>
+<body ng-app>
+    <div class="container" ng-controller="LimitedMessageCtrl">
+        <div class="row">
+            <span ng-class="{'text-warning': shouldWarn()}">Remaining: {{remaining()}}</span>
+            <textarea ng-model="message">{{message}}</textarea>
+        </div>
+        <div class="row">
+            <button ng-click="send()" ng-disabled="!hasValidLength()">Send</button>
+            <button ng-click="clear()">Clear</button>
+        </div>
+    </div>
+</body>
+</html>

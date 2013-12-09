@@ -10,7 +10,8 @@
 <body ng-app ng-init="thing = {name: 'World'}">
 <h1>Hello, {{thing.name}}</h1>
 <div ng-controller="HelloCtrl">
-    <!--This solves the problem of model/view updates across the whole application-->
+    <!--This solves the problem of model/view updates across the whole application.
+        As a rule of thumb, you should have a dot in an expression provided to the ng-model directive-->
     Say hello to: <input type="text" ng-model="thing.name">
     <h2>Hello, {{thing.name}}!</h2>
 </div>

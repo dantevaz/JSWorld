@@ -4,4 +4,11 @@
 
 var HelloCtrl = function($scope){};
 
-//name property will be inherited down from the scope instance initialized via ng-init to children
+/* event bus -> $scope.$broadcast | $scope.$emit
+/  example: react on the location change here. For example, update breadcrumbs based on
+/  the new URL */
+
+//$on method can register a scope-event handler
+$scope.$on('$locationChangeSuccess', function(event, newUrl, oldUrl){
+    //do something
+});
